@@ -22,7 +22,7 @@ The rest of this document focuses on specific aspects of style and documentation
 Coding style includes everything from matters of format (tabs or spaces?) through naming conventions (how should variables, classes, and methods be named?) to matters of syntax (are global variable okay?). The following resources are considered standard for their respective languages. 
 
 ### Python
-- [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide includes recommendations for both syntax as well as format and layout.
+- [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide includes recommendations for syntax as well as for format and layout.
 - [PEP 0008 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). PEP stands for Python Enhancement Proposal. PEP 8 provides the coding conventions for all code that is part of the Python standard library. The focus is on layout and naming conventions rather than on syntax.
 We recommend that you adhere to the syntax recommendations of the Google Python Style Guide and the layout, format, and naming conventions of PEP 8. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of the Google Guide. 
 
@@ -31,12 +31,10 @@ We recommend that you adhere to the syntax recommendations of the Google Python 
 - [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich one, and covers much of the same ground. It covers some points that are missing from the other, however, so it is worth checking out. 
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.  
 
-- Links to style guides or code formatting doc
-- No commented out code
-
 ## Comments
 - Code self explanatory
 - No long inline comments, use docstrings for comments
+- No commented out code
 
 ## README files
 - describe how to run app, how app works
