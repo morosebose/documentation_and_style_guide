@@ -14,7 +14,7 @@ Documentation and style guidelines thus represent **agreed-upon shared conventio
 
 Learning to follow conventions is more important than the conventions themselves. The point isn't that tabs are objectively better or worse than spaces. The point is that however strongly you may feel right now that using tabs is obviously correct, and requiring spaces instead is just ridiculous (or vice-versa), participating in a community of coders requires respecting the community's norms. 
 
-The overall goal of those conventions is to make your code readable for the community. Joel Spolsky, the founder of [StackOverflow](http://stackoverflow.com/), has identified "a cardinal, fundamental law of programming": **It’s harder to read code than to write it**. The job of a programmer isn't just to write code; it's to write code that is readable and maintainable. Following the guidelines in this document will help you do so. 
+The overall goal of those conventions is to make your code readable for the community. Joel Spolsky, the founder of [StackOverflow](http://stackoverflow.com/), has [identified](http://www.joelonsoftware.com/articles/fog0000000069.html) "a cardinal, fundamental law of programming": **It’s harder to read code than to write it**. The job of a programmer isn't just to write code; it's to write code that is readable and maintainable. Following the guidelines in this document will help you do so. 
 
 The rest of this document focuses on specific aspects of style and documentation: style conventions; commenting guidelines; best practices for GitHub commit messages; and README files.
 
@@ -24,11 +24,13 @@ Coding style includes everything from matters of format (tabs or spaces?) throug
 ### Python
 - [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide includes recommendations for syntax as well as for format and layout.
 - [PEP 0008 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). PEP stands for Python Enhancement Proposal. PEP 8 provides the coding conventions for all code that is part of the Python standard library. The focus is on layout and naming conventions rather than on syntax.
+
 We recommend that you adhere to the syntax recommendations of the Google Python Style Guide and the layout, format, and naming conventions of PEP 8. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of the Google Guide. 
 
 ### Swift
 - [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide). Ray Wenderlich is a well-known iOS guru, and [raywenderlich.com](http://raywenderlich.com) is an indispensible resource for any Swift programmer. The style guide does a good job of explaining the reasoning behind its syntactic and stylistic choices.
 - [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich one, and covers much of the same ground. It covers some points that are missing from the other, however, so it is worth checking out. 
+
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.  
 
 ## Comments
