@@ -16,7 +16,12 @@ Learning to follow conventions is more important than the conventions themselves
 
 The overall goal of those conventions is to make your code readable for the community. Joel Spolsky, the founder of [StackOverflow](http://stackoverflow.com/), has [identified](http://www.joelonsoftware.com/articles/fog0000000069.html) "a cardinal, fundamental law of programming": **It’s harder to read code than to write it**. The job of a programmer isn't just to write code; it's to write code that is readable and maintainable. Following the guidelines in this document will help you do so. 
 
-The rest of this document focuses on specific aspects of style and documentation: style conventions; commenting guidelines; best practices for GitHub commit messages; and README files.
+The rest of this document focuses on specific aspects of style and documentation: 
+
+- Style conventions
+- Commenting guidelines
+- Best practices for GitHub commit messages
+- README file guidelines. 
 
 ## Style conventions
 Coding style covers a wide range of topics, from the purely aesthetic to the rigidly technical:
@@ -44,12 +49,18 @@ The two style guides are in agreement on almost every point. Where they differ (
 Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), and [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
 
 ### Java
-- The [Google Java Style Guide] is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
+The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
+
+### Android
+Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
 ## Comments
 - Code self explanatory
 - No long inline comments, use docstrings for comments
 - No commented out code
+
+## GitHub Commit Messages
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. 
 
 ## README files
 - describe how to run app, how app works
