@@ -1,4 +1,4 @@
-# Style and Documentation Guide for Udacity Projects
+# Style and Documentation Guide for Udacity Student Project Submissions
 
 ## Introduction and Rationale
 This document provides an overview of the coding style and documentation guidelines for Udacity student projects. Style and documentation are explicitly part of the assessment criteria for some projects, but students are encouraged to follow these guidelines for all projects. 
@@ -19,19 +19,29 @@ The overall goal of those conventions is to make your code readable for the comm
 The rest of this document focuses on specific aspects of style and documentation: style conventions; commenting guidelines; best practices for GitHub commit messages; and README files.
 
 ## Style conventions
-Coding style includes everything from matters of format (tabs or spaces?) through naming conventions (how should variables, classes, and methods be named?) to matters of syntax (are global variable okay?). The following resources are considered standard for their respective languages. 
+Coding style covers a wide range of topics, from the purely aesthetic to the rigidly technical:
+
+- **Format**. Tabs or spaces?
+- **Naming conventions**. How should variables, classes, and methods be named?
+- **Program Structure**. Are global variables permissible?
+- **Syntax**. Is it okay to write ternary expressions that have side-effects?
+
+The following style guides are considered standard for their respective languages. 
 
 ### Python
-- [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide includes recommendations for syntax as well as for format and layout.
 - [PEP 0008 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). PEP stands for Python Enhancement Proposal. PEP 8 provides the coding conventions for all code that is part of the Python standard library. The focus is on layout and naming conventions rather than on syntax.
+- [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide is consistent with PEP 8 in its format and layout recommendations. It also includes additional recommendations for syntax. 
 
-We recommend that you adhere to the syntax recommendations of the Google Python Style Guide and the layout, format, and naming conventions of PEP 8. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of the Google Guide. 
+We recommend that you adhere to the layout, format, and naming conventions of PEP 8, and the syntax recommendations of the Google Python Style Guide. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of PEP 8. 
 
 ### Swift
-- [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide). Ray Wenderlich is a well-known iOS guru, and [raywenderlich.com](http://raywenderlich.com) is an indispensible resource for any Swift programmer. The style guide does a good job of explaining the reasoning behind its syntactic and stylistic choices.
-- [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich one, and covers much of the same ground. It covers some points that are missing from the other, however, so it is worth checking out. 
+- [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide). Ray Wenderlich is a well-known iOS guru whose [website](http://raywenderlich.com) is an indispensible resource for any Swift programmer. The style guide does a good job of explaining the reasoning behind its syntactic and stylistic choices.
+- [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich guide, this document covers much of the same ground. It includes some points that are missing from the other, however, so it is worth checking out. 
 
-The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.  
+The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
+
+### HTML, CSS, JavaScript
+Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), and JavaScript(http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
 
 ## Comments
 - Code self explanatory
