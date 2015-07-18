@@ -60,7 +60,10 @@ Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-
 - No commented out code
 
 ## GitHub Commit Messages
-Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. 
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present rather than past tense:
+
+- *Add method to calculate average* (preferred)
+- *Added method to calculate average* (not preferred)
 
 ## README files
 - describe how to run app, how app works
