@@ -33,25 +33,28 @@ Coding style covers a wide range of topics, from the purely aesthetic to the rig
 
 The following guides are recommended for Udacity projects. 
 
-### Python
+#### Python
 - [PEP 0008 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). PEP stands for Python Enhancement Proposal. PEP 8 provides the coding conventions for all code that is part of the Python standard library. The focus is on layout and naming conventions rather than on syntax.
 - [Google Python Style Guide](https://google-styleguide.googlecode.com/svn/trunk/pyguide.html). This guide is consistent with PEP 8 in its format and layout recommendations. It also includes additional recommendations for syntax. 
 
 We recommend that you adhere to the layout, format, and naming conventions of PEP 8, and the syntax recommendations of the Google Python Style Guide. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of PEP 8. 
 
-### Swift
+#### Swift
 - [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide). Ray Wenderlich is a well-known iOS guru whose [website](http://raywenderlich.com) is an indispensible resource for any Swift programmer. The style guide does a good job of explaining the reasoning behind its syntactic and stylistic choices.
 - [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich guide, this document covers much of the same ground. It includes some points that are missing from the other, however, so it is worth checking out. 
 
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
-### HTML, CSS, JavaScript
-Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), and [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
+#### HTML, CSS, JavaScript
+Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
+- [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
 
-### Java
+#### Java
 The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
 
-### Android
+#### Android
 Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
 ## Comments
@@ -62,8 +65,8 @@ Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-
 ## GitHub Commit Messages
 Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present rather than past tense:
 
-- *Add method to calculate average* (preferred)
-- *Added method to calculate average* (not preferred)
+- Add method to calculate average *(preferred)*
+- Added method to calculate average *(not preferred)*
 
 ## README files
 - describe how to run app, how app works
