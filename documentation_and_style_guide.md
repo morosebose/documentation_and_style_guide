@@ -45,7 +45,7 @@ We recommend that you adhere to the layout, format, and naming conventions of PE
 
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
-#### HTML, CSS, JavaScript
+#### HTML, CSS, and JavaScript
 Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
 - [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
 - [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
@@ -55,7 +55,7 @@ Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-de
 The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
 
 #### Android
-Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
+Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) team has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
 ## Comments
 - Code self explanatory
@@ -65,8 +65,8 @@ Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-
 ## GitHub Commit Messages
 Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present rather than past tense:
 
-- Add method to calculate average *(preferred)*
-- Added method to calculate average *(not preferred)*
+- `Add method to calculate average` *(preferred)*
+- `Added method to calculate average` *(not preferred)*
 
 ## README files
 - describe how to run app, how app works
