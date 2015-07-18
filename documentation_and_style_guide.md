@@ -26,7 +26,7 @@ Coding style covers a wide range of topics, from the purely aesthetic to the rig
 - **Program Structure**. Are global variables permissible?
 - **Syntax**. Is it okay to write ternary expressions that have side-effects?
 
-The following style guides are considered standard for their respective languages. 
+The following guides are recommended for Udacity projects. 
 
 ### Python
 - [PEP 0008 -- Style Guide for Python Code](https://www.python.org/dev/peps/pep-0008/). PEP stands for Python Enhancement Proposal. PEP 8 provides the coding conventions for all code that is part of the Python standard library. The focus is on layout and naming conventions rather than on syntax.
@@ -41,7 +41,10 @@ We recommend that you adhere to the layout, format, and naming conventions of PE
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
 ### HTML, CSS, JavaScript
-Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), and JavaScript(http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
+Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html), [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html), and [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
+
+### Java
+- The [Google Java Style Guide] is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
 
 ## Comments
 - Code self explanatory
