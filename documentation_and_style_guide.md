@@ -46,17 +46,17 @@ We recommend that you adhere to the layout, format, and naming conventions of PE
 
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
-#### HTML, CSS, and JavaScript
-Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
-- [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
-- [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
-- [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html). 
-
-Follow the recommendations of those style guides when submitting code written in any of those languages.
-
 #### Java
 - For *non-Android projects*: The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well".
 - For *Android projects*: Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) team has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
+
+#### JavaScript, HTML, and CSS
+Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
+- [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
+- [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
+- [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+
+Follow the recommendations of those style guides when submitting code written in any of those languages.
 
 ## Writing Clean Code
 
@@ -153,15 +153,24 @@ Apple's programming language has a rich set of comment creation and formatting t
 - The comment labels `// MARK:`, `// TODO: `, and `// FIXME: ` are treated as special and rendered as part of the documentation pane. 
 - Comment text can be made bold or italicized . 
 
-[NSHipster](http://nshipster.com/swift-documentation/) has a brief but thorough explanation of documentation creation mechanisms for Swift. 
+[NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. 
 
 #### Java (including Android)
 
 #### JavaScript
 
+#### HTML and CSS
+
+- **HTML comments** are enclosed within `<!-- ... -->`.
+- **CSS comments** are enclosed within `/* ... */`.
+- In both languages, comments can span any number of lines. For multi-line comments:
+  - The opening and closing tags should be on their own separate lines
+  - The enclosed comments should be indented two spaces from the tags. 
+
+Clean HTML and CSS will rarely require any comments. Comments may be useful in development HTML or CSS code as reminders to the programmer, but production code is unlikely to benefit from comments. 
 
 ## Git Commit Messages
-Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what the commit should do rather than what was done to the code:
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what the commit should do rather than what was done to the code:
 
 - `feat: Add method to calculate average`     *(preferred)*
 - `feat: Added method to calculate average`   *(not preferred)*
