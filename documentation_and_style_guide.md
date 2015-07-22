@@ -5,12 +5,12 @@ This document provides an overview of the coding style and documentation guideli
 
 Why should code adhere to documentation and style conventions? Admittedly, such conventions are arbitrary. Different style guides sometimes flatly contradict each other. For example, [Ray Wenderlich's Swift Style Guide](https://github.com/raywenderlich/swift-style-guide) says: "Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping". [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide) says the exact opposite: "Tabs, not spaces". 
 
-Paradoxically, it is the very arbitrariness of coding practice that makes following clearly identified guidelines important. Style guides help make code readable to programmers other than the original coder. Large organizations such as Google specify how code is to be written and documented so that when many different programmers are working on a single project, anyone who picks up a source code file will know what to expect. What if you prefer to use spaces to indent your code and I prefer to use tabs, and you then inherit some of my code? Imagine how much time and aggravation it will take you to change out the tabs in my code to spaces. This isn't just a question of aesthetics; if the language we're using is, say, Python, a file we both have worked on, and which consequently has a mixture of tabs and spaces, may not even compile. 
+Paradoxically, this very arbitrariness of coding practice makes following clearly identified guidelines important. Style guides help make code readable to programmers other than the original coder. Large organizations such as Google specify how code is to be written and documented so that when many different programmers are working on a single project, anyone who picks up a source code file will know what to expect. What if you prefer to use spaces to indent your code and I prefer to use tabs, and you then inherit some of my code? Imagine how much time and aggravation it will take you to change out the tabs in my code to spaces. This isn't just a question of aesthetics; if the language we're using is, say, Python, a file we both have worked on, and which consequently has a mixture of tabs and spaces, may not even compile. 
 
 Documentation and style guidelines thus represent **agreed-upon shared conventions within a particular community of coders**. For the projects you submit to Udacity, the community includes your fellow students, the Nanodegree instructors, the coaches, and the project reviewers. Following the specified conventions is necessary for two reasons:
 
-* It speeds up the review process. Reviewers can work through your code much more quickly if it follows conventions rather than being idiosyncratic. 
-* It provides good practice toward becoming a professional. As noted above, most large organizations (and even many small ones) have an internal style guide. Even though the guidelines specified by your future employer will certainly vary in greater or lesser degree from the ones given here, following Udacity's style and commenting requirements will habituate you to keeping conventions in mind as you code. 
+- It speeds up the review process. Reviewers can work through your code much more quickly if it follows conventions rather than being idiosyncratic. 
+- It provides good practice toward becoming a professional. As noted above, most large organizations (and even many small ones) have an internal style guide. Even though the guidelines specified by your future employer will certainly vary in greater or lesser degree from the ones given here, following Udacity's style and commenting requirements will habituate you to keeping conventions in mind as you code. 
 
 Learning to follow conventions is more important than the conventions themselves. The point isn't that tabs are objectively better or worse than spaces. The point is that however strongly you may feel right now that using tabs is obviously correct, and requiring spaces instead is just ridiculous (or vice-versa), participating in a community of coders requires respecting the community's norms. 
 
@@ -46,7 +46,7 @@ We recommend that you adhere to the layout, format, and naming conventions of PE
 
 The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
-#### Java
+#### Java and Android
 - For *non-Android projects*: The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well".
 - For *Android projects*: Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) team has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
@@ -60,7 +60,7 @@ Follow the recommendations of those style guides when submitting code written in
 
 ## Writing Clean Code
 
-Ideally, code should be so clear and lucid that comments become superfluous. This ideal has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/) Uncle Bob, as he is affectionately known, writes:
+The ideal of code lucid enough to render comments superfluous has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/) Uncle Bob, as he is affectionately known, writes:
 
 >If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much—perhaps not at all.
 
@@ -104,7 +104,7 @@ The key takeaway: clean, readable code trumps heavily commented code every time.
 
 #### When are Comments Necessary?
 
-Does this mean that comments are never necessary? Not quite. There might still be circumstances where code might perforce become somewhat unintuitive. An elegant syntactic formulation might yet be tricky to read, or accounting for edge cases might add complexity. Here's a safer formulation of the `get_rounded_average()` procedure that illustrates both of these:
+Does this mean that comments are never necessary? Not quite. There might still be circumstances where code perforce becomes somewhat unintuitive. An elegant syntactic formulation could yet be tricky to read, or accounting for edge cases could add complexity. Here's a safer formulation of the `get_rounded_average()` procedure that illustrates both of these:
 
 ```python
 def get_rounded_average(studentScores):
@@ -112,7 +112,7 @@ def get_rounded_average(studentScores):
         if studentScores else None
 ```
 
-The revised code makes use of Python's ternary operator to ensure that the program will not crash if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read. A brief comment would improve readability:
+The revised code makes use of Python's ternary operator to ensure that the program will not crash with a division-by-zero error if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read. A brief comment would improve readability:
 
 ```python
 def get_rounded_average(studentScores):
@@ -149,11 +149,13 @@ A docstring becomes the special __doc__ attribute of its object, which can be re
 #### Swift
 Apple's programming language has a rich set of comment creation and formatting techniques. Some notable features are:
 
-- Option-clicking on the name of a method or a class opens a hovering documentation pane that displays the documentation for that method or class. To enable this, set off single-line comments by using `///` at the beginning of the line. Embed multi-line comments between `/** ... */`. 
-- The comment labels `// MARK:`, `// TODO: `, and `// FIXME: ` are treated as special and rendered as part of the documentation pane. 
+- Option-clicking on the name of a method or a class opens a hovering documentation pane that displays the documentation for that method or class. To enable this:
+  - Set off single-line comments by using `///` at the beginning of the line.
+  - Embed multi-line comments between `/** ... */`. 
+- The comment labels `// MARK: `, `// TODO: `, and `// FIXME: ` are treated as special and rendered as part of the documentation pane. 
 - Comment text can be made bold or italicized . 
 
-[NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. 
+[NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. Students are encouraged to use these techniques to generate documentation for their code.
 
 #### Java (including Android)
 Java uses a special documentation syntax called javadoc. Not only is javadoc used as source code documentation, it is also exported as HTML documentation pages ([Java SDK documentation](https://docs.oracle.com/javase/8/docs/api/) and [Android SDK documentation](https://developer.android.com/reference/packages.html) are generated from javadoc). Here's an example of a javadoc comment for a method:
