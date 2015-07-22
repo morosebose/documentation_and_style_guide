@@ -65,8 +65,207 @@ Follow the recommendations of those style guides when submitting code written in
 ## GitHub Commit Messages
 Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present rather than past tense:
 
+<<<<<<< HEAD
 - `Add method to calculate average` *(preferred)*
 - `Added method to calculate average` *(not preferred)*
+||||||| parent of 77bb9b4... Incomplete draft v0.56
+>If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much—perhaps not at all.
+
+How does one wield a programming language expressively, so as to minimize the need for comments? One way is to use intuitive identifiers, i.e., variable or method names. Consider the following example. The code is in Python 2.7, but the principles apply to any language:
+
+```python
+def mean(arr):
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+That's pretty cryptic. Although it's possible to figure out what the code is doing, the code itself isn't exactly readable. An inexperienced programmer might be tempted to explain how the code works:
+
+```python
+def mean(arr):
+    '''
+    Given the array of student scores, take the sum of the array,
+    cast the sum as a float, then divide it by the number of array elements.
+    Return the result rounded to two decimal places.
+    '''
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what the code is supposed to accomplish in context:
+
+```python
+def mean(arr):
+    '''
+    Calculate and return the average score rounded to two decimal places. 
+    '''
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+But the cleanest strategy would be to use intuitive names, eliminating the need for comments altogether:
+
+```python
+def get_rounded_average(studentScores):
+    return round(float(sum(studentScores)) / len(studentScores), 2)
+```
+
+The key takeaway: clean, readable code trumps heavily commented code every time. 
+
+#### When are Comments Necessary?
+
+Does this mean that comments are never necessary? Not quite. There might still be circumstances where code might perforce become somewhat unintuitive. An elegant syntactic formulation might yet be tricky to read, or accounting for edge cases might add complexity. Here's a safer formulation of the `get_rounded_average()` procedure that illustrates both of these:
+
+```python
+def get_rounded_average(studentScores):
+    return round(float(sum(studentScores)) / len(studentScores), 2) \
+        if studentScores else None
+```
+
+The revised code makes use of Python's ternary operator to ensure that the program will not crash if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read. A brief comment would improve the readability of the code:
+
+```python
+def get_rounded_average(studentScores):
+    '''
+    Return the average of the student scores rounded to two decimal places.
+    Return None if the scores array is empty. 
+    '''
+    return round(float(sum(studentScores)) / len(studentScores), 2) \
+        if studentScores else None
+```
+
+## Commenting Guidelines
+
+#### Best Practices
+
+When it's necessary to add comments to code, follow these best practices:
+
+- **Be concise**. Keep your comments brief. As we've seen, one or two lines explaining *what* a given function accomplishes can be helpful. But *how* the code works should be clear from the code itself, not from lengthy comments. 
+- **Use inline comments sparingly**. It is rarely necessary to explain individual lines of code. A brief comment might occasionally be needed to explain a block of code within a function, but if your function has several such blocks, consider refactoring the code into smaller functions. 
+- **Remove all commented-out "dead code" or "legacy code"**. It's never a good idea to leave superseded or not-yet-live versions of the code in commented-out form within the source file. These [two](http://programmers.stackexchange.com/questions/190096/can-commented-out-code-be-valuable-documentation) [posts](http://programmers.stackexchange.com/questions/45378/is-commented-out-code-really-always-bad) on StackExchange explain why. 
+
+In addition, specific languages have guidelines about the best way to document code.
+
+#### Python
+Python code is expected to include **docstrings**. A docstring is a string surrounded by triple quotes (''') that occurs as the first statement in a module, function, class, or method definition. Docstring conventions are laid out in [PEP 0257](https://www.python.org/dev/peps/pep-0257/). As stated therein:
+
+>All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. Public methods (including the __init__ constructor) should also have docstrings.
+
+A docstring becomes the special __doc__ attribute of its object, which can be retrieved for reference purposes. Taking the code above as an example, the command `print get_rounded_average.__doc__` yields the following output:
+
+>Return the average of the student scores rounded to two decimal places.
+>
+>Return None if the scores array is empty. 
+
+#### Swift
+http://nshipster.com/swift-documentation/
+
+#### Java (including Android)
+
+#### JavaScript
+
+
+## Git Commit Messages
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what need the commit addresses rather than what was done to the code:
+
+- `feat: Add method to calculate average`     *(preferred)*
+- `feat: Added method to calculate average`   *(not preferred)*
+=======
+>If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much—perhaps not at all.
+
+How does one wield a programming language expressively, so as to minimize the need for comments? One way is to use intuitive identifiers, i.e., variable or method names. Consider the following example. The code is in Python 2.7, but the principles apply to any language:
+
+```python
+def mean(arr):
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+That's pretty cryptic. Although it's possible to figure out what the code is doing, the code itself isn't exactly readable. An inexperienced programmer might be tempted to explain how the code works:
+
+```python
+def mean(arr):
+    '''
+    Given the array of student scores, take the sum of the array,
+    cast the sum as a float, then divide it by the number of array elements.
+    Return the result rounded to two decimal places.
+    '''
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what the code is supposed to accomplish in context:
+
+```python
+def mean(arr):
+    '''
+    Calculate and return the average score rounded to two decimal places. 
+    '''
+    return round(float(sum(arr)) / len(arr), 2)
+```
+
+But the cleanest strategy would be to use intuitive names, eliminating the need for comments altogether:
+
+```python
+def get_rounded_average(studentScores):
+    return round(float(sum(studentScores)) / len(studentScores), 2)
+```
+
+The key takeaway: clean, readable code trumps heavily commented code every time. 
+
+#### When are Comments Necessary?
+
+Does this mean that comments are never necessary? Not quite. There might still be circumstances where code might perforce become somewhat unintuitive. An elegant syntactic formulation might yet be tricky to read, or accounting for edge cases might add complexity. Here's a safer formulation of the `get_rounded_average()` procedure that illustrates both of these:
+
+```python
+def get_rounded_average(studentScores):
+    return round(float(sum(studentScores)) / len(studentScores), 2) \
+        if studentScores else None
+```
+
+The revised code makes use of Python's ternary operator to ensure that the program will not crash if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read. A brief comment would improve the readability of the code:
+
+```python
+def get_rounded_average(studentScores):
+    '''
+    Return the average of the student scores rounded to two decimal places.
+    Return None if the scores array is empty. 
+    '''
+    return round(float(sum(studentScores)) / len(studentScores), 2) \
+        if studentScores else None
+```
+
+## Commenting Guidelines
+
+#### Best Practices
+
+When it's necessary to add comments to code, follow these best practices:
+
+- **Be concise**. Keep your comments brief. As we've seen, one or two lines explaining *what* a given function accomplishes can be helpful. But *how* the code works should be clear from the code itself, not from lengthy comments. 
+- **Use inline comments sparingly**. It is rarely necessary to explain individual lines of code. A brief comment might occasionally be needed to explain a block of code within a function, but if your function has several such blocks, consider refactoring the code into smaller functions. 
+- **Remove all commented-out "dead code" or "legacy code"**. It's never a good idea to leave superseded or not-yet-live versions of the code in commented-out form within the source file. These [two](http://programmers.stackexchange.com/questions/190096/can-commented-out-code-be-valuable-documentation) [posts](http://programmers.stackexchange.com/questions/45378/is-commented-out-code-really-always-bad) on StackExchange explain why. 
+
+In addition, specific languages have guidelines about the best way to document code.
+
+#### Python
+Python code is expected to include **docstrings**. A docstring is a string surrounded by triple quotes `'''` that occurs as the first statement in a module, function, class, or method definition. Docstring conventions are laid out in [PEP 0257](https://www.python.org/dev/peps/pep-0257/). As stated therein:
+
+>All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. Public methods (including the __init__ constructor) should also have docstrings.
+
+A docstring becomes the special __doc__ attribute of its object, which can be retrieved for reference purposes. Taking the code above as an example, the command `print get_rounded_average.__doc__` yields the following output:
+
+>Return the average of the student scores rounded to two decimal places.
+>Return None if the scores array is empty. 
+
+#### Swift
+http://nshipster.com/swift-documentation/
+
+#### Java (including Android)
+
+#### JavaScript
+
+
+## Git Commit Messages
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what need the commit addresses rather than what was done to the code:
+
+- `feat: Add method to calculate average`     *(preferred)*
+- `feat: Added method to calculate average`   *(not preferred)*
+>>>>>>> 77bb9b4... Incomplete draft v0.56
 
 ## README files
 - describe how to run app, how app works
