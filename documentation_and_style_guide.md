@@ -156,6 +156,26 @@ Apple's programming language has a rich set of comment creation and formatting t
 [NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. 
 
 #### Java (including Android)
+Java uses a special documentation syntax called javadoc. Not only is javadoc used as source code documentation, it is also exported as HTML documentation pages ([Java SDK documentation](https://docs.oracle.com/javase/8/docs/api/) and [Android SDK documentation](https://developer.android.com/reference/packages.html) are generated from javadoc). Here's an example of a javadoc comment for a method:
+
+```java
+/**
+ * Returns the mean of the given student scores.
+ * @param studentScores the student scores used to compute the mean
+ * @return the mean of the scores
+ */
+public static double mean(double[] studentScores) {
+    // ...
+}
+```
+
+A Javadoc comment is delimited by `/**` and `*/` and should begin with at least one sentence that starts with a third-person verb. This should describe what the method does as well as any important side effects occur when the method is called. Each parameter must be documented with a `@param` tag, formatted as
+
+    @param parameterName description of the parameter
+
+The `@return` tag is required for every method that returns something (non-`void`), even if it is redundant with the method description.
+
+For the complete guide to Javadoc, see Oracle's ["How to Write Doc Comments for the Javadoc Tool"](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html) documentation.
 
 #### JavaScript
 
