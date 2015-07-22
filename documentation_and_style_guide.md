@@ -55,7 +55,7 @@ Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-de
 Follow the recommendations of those style guides when submitting code written in any of those languages.
 
 #### Java
-- For *non-Android projects*: The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well."
+- For *non-Android projects*: The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well".
 - For *Android projects*: Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) team has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
 ## Writing Clean Code
@@ -137,18 +137,23 @@ When it is necessary to add comments to code, follow these best practices:
 In addition, specific languages have guidelines about the best way to document code.
 
 #### Python
-Python code is expected to include **docstrings**. A docstring is a string surrounded by triple quotes (''') that occurs as the first statement in a module, function, class, or method definition. Docstring conventions are laid out in [PEP 0257](https://www.python.org/dev/peps/pep-0257/). As stated therein:
+Python code is expected to include **docstrings**. A docstring is a string surrounded by triple quotes `'''` that occurs as the first statement in a module, function, class, or method definition. Docstring conventions are laid out in [PEP 0257](https://www.python.org/dev/peps/pep-0257/). As stated therein:
 
 >All modules should normally have docstrings, and all functions and classes exported by a module should also have docstrings. Public methods (including the __init__ constructor) should also have docstrings.
 
 A docstring becomes the special __doc__ attribute of its object, which can be retrieved for reference purposes. Taking the code above as an example, the command `print get_rounded_average.__doc__` yields the following output:
 
 >Return the average of the student scores rounded to two decimal places.
->
 >Return None if the scores array is empty. 
 
 #### Swift
-http://nshipster.com/swift-documentation/
+Apple's programming language has a rich set of comment creation and formatting techniques. Some notable features are:
+
+- Option-clicking on the name of a method or a class opens a hovering documentation pane that displays the documentation for that method or class. To enable this, set off single-line comments by using `///` at the beginning of the line. Embed multi-line comments between `/** ... */`. 
+- The comment labels `// MARK:`, `// TODO: `, and `// FIXME: ` are treated as special and rendered as part of the documentation pane. 
+- Comment text can be made bold or italicized . 
+
+[NSHipster](http://nshipster.com/swift-documentation/) has a brief but thorough explanation of documentation creation mechanisms for Swift. 
 
 #### Java (including Android)
 
@@ -156,7 +161,7 @@ http://nshipster.com/swift-documentation/
 
 
 ## Git Commit Messages
-Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what need the commit addresses rather than what was done to the code:
+Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative Git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what the commit should do rather than what was done to the code:
 
 - `feat: Add method to calculate average`     *(preferred)*
 - `feat: Added method to calculate average`   *(not preferred)*
