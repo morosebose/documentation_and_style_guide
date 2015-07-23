@@ -86,12 +86,12 @@ def mean(arr):
     return round(float(sum(arr)) / len(arr), 2)
 ```
 
-That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what the code is supposed to accomplish in context:
+That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what purpose the code serves in context. The following comment is an improvement, as it specifies exactly why the function is useful, i.e., what purpose it serves:
 
 ```python
 def mean(arr):
     '''
-    Calculate and return the average score rounded to two decimal places. 
+    Calculates and returns the average score rounded to two decimal places. 
     '''
     return round(float(sum(arr)) / len(arr), 2)
 ```
@@ -120,8 +120,8 @@ The revised code makes use of Python's ternary operator to ensure that the progr
 ```python
 def get_rounded_average(studentScores):
     '''
-    Return the average of the student scores rounded to two decimal places.
-    Return None if the scores array is empty. 
+    Returns the average of the student scores rounded to two decimal places.
+    Returns None if the scores array is empty. 
     '''
     return round(float(sum(studentScores)) / len(studentScores), 2) \
         if studentScores else None
@@ -133,9 +133,9 @@ def get_rounded_average(studentScores):
 
 When it is necessary to add comments to code, follow these best practices:
 
-- **Be concise**. Keep your comments brief. As we've seen, one or two lines explaining *what* a given function accomplishes can be helpful. But *how* the code works should be clear from the code itself, not from lengthy comments. 
+- **Be concise**. Keep your comments brief. As we've seen, a line or two about the *why* of a given function can sometimes be helpful. But *how* the code works should be clear from the code itself, not from lengthy comments. 
 - **Use inline comments sparingly**. It is rarely necessary to explain individual lines of code. A brief comment might occasionally be needed to explain a block of code within a function, but if your function has several such blocks, consider refactoring the code into smaller functions. 
-- **Remove all commented-out "dead code" or "legacy code"**. It's never a good idea to leave superseded or not-yet-live versions of the code in commented-out form within the source file. These [two](http://programmers.stackexchange.com/questions/190096/can-commented-out-code-be-valuable-documentation) [posts](http://programmers.stackexchange.com/questions/45378/is-commented-out-code-really-always-bad) on StackExchange explain why. 
+- **Remove all commented-out "dead code" or "legacy code"**. It's never a good idea to leave superseded or not-yet-live versions of the code in commented-out form within the source file. [These](http://programmers.stackexchange.com/questions/190096/can-commented-out-code-be-valuable-documentation) two [posts](http://programmers.stackexchange.com/questions/45378/is-commented-out-code-really-always-bad) on [StackExchange Programmers](http://programmers.stackexchange.com/) explain why. 
 
 In addition, specific languages have guidelines about the best way to document code.
 
