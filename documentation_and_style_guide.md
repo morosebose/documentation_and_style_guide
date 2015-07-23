@@ -158,7 +158,7 @@ Apple's programming language has a rich set of comment creation and formatting t
 [NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. Students are encouraged to use these techniques to generate documentation for their code.
 
 #### Java (including Android)
-Java uses a special documentation syntax called javadoc. Not only is javadoc used as source code documentation, it is also exported as HTML documentation pages ([Java SDK documentation](https://docs.oracle.com/javase/8/docs/api/) and [Android SDK documentation](https://developer.android.com/reference/packages.html) are generated from javadoc). Here's an example of a javadoc comment for a method:
+Java uses a special documentation syntax called **Javadoc**. Javadoc is not only used as source code documentation, but also exported as HTML documentation pages ([Java SDK documentation](https://docs.oracle.com/javase/8/docs/api/) and [Android SDK documentation](https://developer.android.com/reference/packages.html) are generated from Javadoc). Here's an example of a Javadoc comment for a method:
 
 ```java
 /**
@@ -171,20 +171,22 @@ public static double mean(double[] studentScores) {
 }
 ```
 
-A Javadoc comment is delimited by `/**` and `*/` and should begin with at least one sentence that starts with a third-person verb. This should describe what the method does as well as any important side effects occur when the method is called. Each parameter must be documented with a `@param` tag, formatted as
+A Javadoc comment is delimited by `/** ` and ` */` and should begin with at least one sentence that starts with a third-person verb. This should describe what the method does as well as any important side effects that occur when the method is called. Each parameter must be documented with a `@param` tag, formatted as
 
     @param parameterName description of the parameter
 
 The `@return` tag is required for every method that returns something (non-`void`), even if it is redundant with the method description.
 
-For the complete guide to Javadoc, see Oracle's ["How to Write Doc Comments for the Javadoc Tool"](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html) documentation.
+For the complete guide to Javadoc, see Oracle's ["How to Write Doc Comments for the Javadoc Tool"](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
 
 #### JavaScript
 
+JavaScript has a documentation generator called [JSDoc](http://usejsdoc.org/about-getting-started.html) that is similar to Javadoc. Students are encouraged to explore JSDoc techniques, but the use of JSDoc comments is not required in Udacity project submissions written in JavaScript. 
+
 #### HTML and CSS
 
-- **HTML comments** are enclosed within `<!-- ... -->`.
-- **CSS comments** are enclosed within `/* ... */`.
+- **HTML comments** are delimited by `<!-- ` and ` -->`.
+- **CSS comments** are delimited by `/* ` and ` */`.
 - In both languages, comments can span any number of lines. For multi-line comments:
   - The opening and closing tags should be on their own separate lines
   - The enclosed comments should be indented two spaces from the tags. 
@@ -192,12 +194,29 @@ For the complete guide to Javadoc, see Oracle's ["How to Write Doc Comments for 
 Clean HTML and CSS will rarely require any comments. Comments may be useful in development HTML or CSS code as reminders to the programmer, but production code is unlikely to benefit from comments. 
 
 ## Git Commit Messages
-Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what the commit should do rather than what was done to the code:
+For projects that are submitted via a GitHub repo, Udacity's instructors have developed a [Git Style Guide](http://udacity.github.io/android-nanodegree-guidelines/git.html) that details how to write a concise, thorough, and informative git commit message. Note that commit messages are in present imperative rather than past declarative tense. I.e., they specify what the commit should accomplish rather than what was done to the code:
 
 - `feat: Add method to calculate average`     *(preferred)*
 - `feat: Added method to calculate average`   *(not preferred)*
 
+Bear in mind that the reviewer will see only the version of the project that is in the default branch of the GitHub repo at the time of submission. Any changes made to the branch after submission, or any code in branches other than the default, will not be accessible to the reviewer. 
+
 ## README files
-- describe how to run app, how app works
-- Teresa Aysan's PFwP file
-- Template? Is it filled in, is it accurate?
+Some Udacity projects require the student to include a README file. The README should provide all instructions that will enable an end-user to successfully run your project. The README file need not be very long, but it should provide all the necessary details for the end-user to set up and use your project as you have designed it. If you do not include such details, then your project may not work as expected for the reviewer.
+
+Examples of the sort of information needed in the README are:
+
+- What version of the programming language is your project written in? A program written in, say, Python 2.7 may not run if the end-user uses Python 3.
+- If your code will run only on Windows, only on Mac, etc., the README should specify this. For safety's sake, even if you think the code is platform-agnostic, include details regarding the operating system and version you used to develop your project.
+- If you used any external libraries, provide detailed instructions on how to download and install the files:
+  - If you have used a package manager such as pip, please provide the exact command to be typed for downloading and installing the library.
+  - If the library needs to be downloaded manually, provide the URL to the download site.
+  - If there are several versions of the external library, be sure to specify which version is needed.
+  - If there are any known “gotchas” that the user should keep in mind while installing or running the external library, be sure to include instructions or URLs regarding those.
+- Provide installation instructions as needed. 
+- Explain how your program is to be launched and run:
+  - Is there an icon to double-click?
+  - Is there a prompt to be entered at a command-line?
+  - Are there any environment variables to be set?
+
+Specific projects may have additional requirements for the README. Please check the rubric for the project and verify that the README is in keeping with the stated requirements. 
