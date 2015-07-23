@@ -147,7 +147,7 @@ Python code is expected to include **docstrings**. A docstring is a string surro
 
 A docstring becomes the special __doc__ attribute of its object, which can be retrieved for reference purposes. Taking the code above as an example, the command `print get_rounded_average.__doc__` yields the following output:
 
->Returns the average of the student scores rounded to two decimal places. 
+>Returns the average of the student scores rounded to two decimal places. <br>
 >Returns None if the scores array is empty. 
 
 #### Swift
@@ -162,9 +162,7 @@ Apple's programming language has a rich set of comment creation and formatting t
 [NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. Students are encouraged to use these techniques to generate documentation for their code.
 
 #### Java (including Android)
-Java uses a special documentation syntax called **Javadoc**. Javadoc used to document source code can also be exported as HTML doc pages. The documentation for the [Java SDK](https://docs.oracle.com/javase/8/docs/api/) and the [Android SDK](https://developer.android.com/reference/packages.html) is generated using Javadoc. 
-
-Here is an example of a Javadoc comment for a method:
+Java uses a special documentation syntax called **Javadoc**. Javadoc used to document source code can also be exported as HTML doc pages. The documentation for the [Java SDK](https://docs.oracle.com/javase/8/docs/api/) and the [Android SDK](https://developer.android.com/reference/packages.html) is generated using Javadoc. Here is an example of a Javadoc comment for a method:
 
 ```java
 /**
