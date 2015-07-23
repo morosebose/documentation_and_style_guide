@@ -41,10 +41,13 @@ The following guides are recommended for Udacity projects.
 We recommend that you adhere to the layout, format, and naming conventions of PEP 8, and the syntax recommendations of the Google Python Style Guide. If there is a contradiction between the Google Guide and PEP 8, resolve it in favor of PEP 8. 
 
 #### Swift
+
+The Swift specification is still emerging. As such, projects written in earlier versions of the language may not compile under newer versions. Swift projects submitted to Udacity must be written in the latest production (non-beta) release of the language. Code must adhere to the recommendations of the following style guides:
+
 - [raywenderlich.com Swift Style Guide](https://github.com/raywenderlich/swift-style-guide). Ray Wenderlich is a well-known iOS guru whose [website](http://raywenderlich.com) is an indispensible resource for any Swift programmer. The style guide does a good job of explaining the reasoning behind its syntactic and stylistic choices.
 - [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide). Considerably shorter than the Wenderlich guide, this document covers much of the same ground. It includes some points that are missing from the other, however, so it is worth checking out. 
 
-The two style guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
+The two guides are in agreement on almost every point. Where they differ (as in the tabs vs. spaces example discussed above), resolve the contradiction in favor of the Wenderlich guide.
 
 #### Java and Android
 - For *non-Android projects*: The [Google Java Style Guide](https://google-styleguide.googlecode.com/svn/trunk/javaguide.html) is an excellent resource. As its introduction says, "the issues covered span not only aesthetic issues of formatting, but other types of conventions or coding standards as well".
@@ -54,13 +57,13 @@ The two style guides are in agreement on almost every point. Where they differ (
 Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
 - [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 - [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
-- [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html)
+- [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html).
 
 Follow the recommendations of those style guides when submitting code written in any of those languages.
 
 ## Writing Clean Code
 
-The ideal of code lucid enough to render comments superfluous has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/) Uncle Bob, as he is affectionately known, writes:
+The ideal of code lucid enough to render comments superfluous has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/), Uncle Bob, as he is affectionately known, writes:
 
 >If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much—perhaps not at all.
 
@@ -214,9 +217,9 @@ Examples of the sort of information needed in the README are:
   - If there are several versions of the external library, be sure to specify which version is needed.
   - If there are any known “gotchas” that the user should keep in mind while installing or running the external library, be sure to include instructions or URLs regarding those.
 - Provide installation instructions as needed. 
-- Explain how your program is to be launched and run:
+- Explain how your program should be launched and run:
   - Is there an icon to double-click?
   - Is there a prompt to be entered at a command-line?
-  - Are there any environment variables to be set?
+  - Are there any environment variables to set?
 
-Specific projects may have additional requirements for the README. Please check the rubric for the project and verify that the README is in keeping with the stated requirements. 
+Specific projects may have additional requirements for the README. Please check the rubric for the project and verify that the README conforms to the stated requirements. 
