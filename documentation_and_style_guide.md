@@ -5,7 +5,7 @@ This document provides an overview of the coding style and documentation guideli
 
 Why should code adhere to documentation and style conventions? Admittedly, such conventions are arbitrary. Different style guides sometimes flatly contradict each other. For example, [Ray Wenderlich's Swift Style Guide](https://github.com/raywenderlich/swift-style-guide) says: "Indent using 2 spaces rather than tabs to conserve space and help prevent line wrapping". [GitHub's Swift Style Guide](https://github.com/github/swift-style-guide) says the exact opposite: "Tabs, not spaces". 
 
-Paradoxically, this very arbitrariness of coding practice makes following clearly identified guidelines important. Style guides help make code readable to programmers other than the original coder. Large organizations such as Google specify how code is to be written and documented so that when many different programmers are working on a single project, anyone who picks up a source code file will know what to expect. What if you prefer to use spaces to indent your code and I prefer to use tabs, and you then inherit some of my code? Imagine how much time and aggravation it will take you to change out the tabs in my code to spaces. This isn't just a question of aesthetics; if the language we're using is, say, Python, a file we both have worked on, and which consequently has a mixture of tabs and spaces, may not even compile. 
+Paradoxically, this very arbitrariness of coding practice makes following clearly identified guidelines important. Style guides help make code readable to programmers other than the original coder. Large organizations such as Google specify how code is to be written and documented so that when many different programmers are working on a single project, anyone who picks up a source code file will know what to expect. What if you prefer to use spaces to indent your code and I prefer to use tabs, and you then inherit some of my code? Imagine how much time and aggravation it will take you to change out the tabs in my code to spaces. This isn't just a question of aesthetics; if the language we're using is, say, Python, the code we both have worked on, and which consequently has a mixture of tabs and spaces, may not even run. 
 
 Documentation and style guidelines thus represent **agreed-upon shared conventions within a particular community of coders**. For the projects you submit to Udacity, the community includes your fellow students, the Nanodegree instructors, the coaches, and the project reviewers. Following the specified conventions is necessary for two reasons:
 
@@ -54,16 +54,17 @@ The two guides are in agreement on almost every point. Where they differ (as in 
 - For *Android projects*: Udacity's [Android Developer Nanodegree](https://www.udacity.com/course/android-developer-nanodegree--nd801) team has developed a [style guide](http://udacity.github.io/android-nanodegree-guidelines/index.html) for use in app source code. This style guide is a subset of the standard [Android Code Style Guidelines for Developers](http://source.android.com/source/code-style.html). 
 
 #### JavaScript, HTML, and CSS
-Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style guide for these languages:
+Udacity's [Front-End Nanodegree](https://www.udacity.com/course/front-end-web-developer-nanodegree--nd001) team has developed a style specification for these languages:
 - [JavaScript](http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html)
 - [HTML](http://udacity.github.io/frontend-nanodegree-styleguide/index.html)
 - [CSS](http://udacity.github.io/frontend-nanodegree-styleguide/css.html).
 
-Follow the recommendations of those style guides when submitting code written in any of those languages.
+Follow that specification when submitting code written in any of these three.
 
 ## Writing Clean Code
 
-The ideal of code lucid enough to render comments superfluous has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/), Uncle Bob, as he is affectionately known, writes:
+#### Self-Documenting Code
+Code should speak for itself. The ideal of code lucid enough to render comments superfluous has been most eloquently championed by Robert C. Martin. In [*Clean Code: A Handbook of Agile Software Craftsmanship*](http://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/), Uncle Bob, as he is affectionately known, writes:
 
 >If our programming languages were expressive enough, or if we had the talent to subtly wield those languages to express our intent, we would not need comments very much—perhaps not at all.
 
@@ -86,7 +87,7 @@ def mean(arr):
     return round(float(sum(arr)) / len(arr), 2)
 ```
 
-That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what purpose the code serves in context. The following comment is an improvement, as it specifies exactly why the function is useful, i.e., what purpose it serves:
+That really isn't much better, though. The comment merely restates the workings of the code. And the restatement is longer than the code itself! It would be preferable to explain what purpose the code serves in context. The following comment is an improvement, as it specifies exactly why the function is useful:
 
 ```python
 def mean(arr):
@@ -105,7 +106,7 @@ def get_rounded_average(studentScores):
 
 The key takeaway: clean, readable code trumps heavily commented code every time. 
 
-#### When are Comments Necessary?
+#### When are Comments Useful?
 
 Does this mean that comments are never necessary? Not quite. There might still be circumstances where code perforce becomes somewhat unintuitive. An elegant syntactic formulation could yet be tricky to read, or accounting for edge cases could add complexity. Here's a safer formulation of the `get_rounded_average()` procedure that illustrates both of these:
 
@@ -115,7 +116,7 @@ def get_rounded_average(studentScores):
         if studentScores else None
 ```
 
-The revised code makes use of Python's ternary operator to ensure that the program will not crash with a division-by-zero error if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read. A brief comment would improve readability:
+The revised code makes use of Python's ternary operator to ensure that the program will not crash with a division-by-zero error if the `studentScores` array is empty. However, the revised code is no longer as intuitive to read; what does `if studentScores else None` mean? A brief comment would improve readability:
 
 ```python
 def get_rounded_average(studentScores):
@@ -137,7 +138,7 @@ When it is necessary to add comments to code, follow these best practices:
 - **Use inline comments sparingly**. It is rarely necessary to explain individual lines of code. A brief comment might occasionally be needed to explain a block of code within a function, but if your function has several such blocks, consider refactoring the code into smaller functions. 
 - **Remove all commented-out "dead code" or "legacy code"**. It's never a good idea to leave superseded or not-yet-live versions of the code in commented-out form within the source file. [These](http://programmers.stackexchange.com/questions/190096/can-commented-out-code-be-valuable-documentation) two [posts](http://programmers.stackexchange.com/questions/45378/is-commented-out-code-really-always-bad) on [StackExchange Programmers](http://programmers.stackexchange.com/) explain why. 
 
-In addition, specific languages have guidelines about the best way to document code.
+In addition to these general rules, different languages have their own guidelines about the best way to document code. Here are some language-specific resources.
 
 #### Python
 Python code is expected to include **docstrings**. A docstring is a string surrounded by triple quotes `'''` that occurs as the first statement in a module, function, class, or method definition. Docstring conventions are laid out in [PEP 0257](https://www.python.org/dev/peps/pep-0257/). As stated therein:
@@ -146,8 +147,8 @@ Python code is expected to include **docstrings**. A docstring is a string surro
 
 A docstring becomes the special __doc__ attribute of its object, which can be retrieved for reference purposes. Taking the code above as an example, the command `print get_rounded_average.__doc__` yields the following output:
 
->Return the average of the student scores rounded to two decimal places.
->Return None if the scores array is empty. 
+>Returns the average of the student scores rounded to two decimal places. 
+>Returns None if the scores array is empty. 
 
 #### Swift
 Apple's programming language has a rich set of comment creation and formatting techniques. Some notable features are:
@@ -161,7 +162,9 @@ Apple's programming language has a rich set of comment creation and formatting t
 [NSHipster](http://nshipster.com/swift-documentation/) has a helpful explanation of documentation creation mechanisms for Swift. Students are encouraged to use these techniques to generate documentation for their code.
 
 #### Java (including Android)
-Java uses a special documentation syntax called **Javadoc**. Javadoc is not only used as source code documentation, but also exported as HTML documentation pages ([Java SDK documentation](https://docs.oracle.com/javase/8/docs/api/) and [Android SDK documentation](https://developer.android.com/reference/packages.html) are generated from Javadoc). Here's an example of a Javadoc comment for a method:
+Java uses a special documentation syntax called **Javadoc**. Javadoc used to document source code can also be exported as HTML doc pages. The documentation for the [Java SDK](https://docs.oracle.com/javase/8/docs/api/) and the [Android SDK](https://developer.android.com/reference/packages.html) is generated using Javadoc. 
+
+Here is an example of a Javadoc comment for a method:
 
 ```java
 /**
@@ -178,13 +181,13 @@ A Javadoc comment is delimited by `/** ` and ` */` and should begin with at leas
 
     @param parameterName description of the parameter
 
-The `@return` tag is required for every method that returns something (non-`void`), even if it is redundant with the method description.
+The `@return` tag is required for every method that returns a value (non-`void`), even if it is redundant with the method description.
 
-For the complete guide to Javadoc, see Oracle's ["How to Write Doc Comments for the Javadoc Tool"](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
+For the complete guide to Javadoc, see Oracle's [How to Write Doc Comments for the Javadoc Tool](http://www.oracle.com/technetwork/java/javase/documentation/index-137868.html).
 
 #### JavaScript
 
-JavaScript has a documentation generator called [JSDoc](http://usejsdoc.org/about-getting-started.html) that is similar to Javadoc. Students are encouraged to explore JSDoc techniques, but the use of JSDoc comments is not required in Udacity project submissions written in JavaScript. 
+JavaScript has a documentation generator called [JSDoc](http://usejsdoc.org/about-getting-started.html) that is similar to Javadoc. Students are encouraged to explore JSDoc techniques, but the use of JSDoc comments is not required for Udacity project submissions written in JavaScript. 
 
 #### HTML and CSS
 
